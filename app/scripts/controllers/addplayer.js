@@ -15,6 +15,8 @@ angular.module('sample1App')
     //get team name 
     $scope.teamName =  firebaseService.getTeamDetails(team_id);
 
+    $scope.viewExistingPlayers = firebaseService.getTeamDetails(team_id);
+
   	$scope.addPlayer = function(){
 
   		firebaseService.addPlayer(team_id, {

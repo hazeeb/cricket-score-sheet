@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-8">
-        <h3> Team : {{teamName.name}} </h3>
+        <h3> Team : <b> {{teamName.name}} </b> </h3>
         <h4 class="text-center">Player Details </h4>
         <form class="form-horizontal">
             <div class="form-group">
@@ -33,7 +33,20 @@
             </div>
         </form>
     </div>
-    <div class="col-lg-4">
-        <p>Names Of Players</p>
+    <div class="col-lg-4 text-center">
+        <h3> Players In {{teamName.name}} </h3><hr>
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="player in viewExistingPlayers.players">
+                    <td> {{player.name}} </td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
 </div>
