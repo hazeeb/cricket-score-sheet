@@ -18,6 +18,7 @@ angular.module('sample1App')
 		// 	$firebaseObject.$remove(player);
 		// 	return $firebaseArray(ref);
 		// };
+		
 
 		service.getTeamDetails = function(team_id){
 			var ref = new Firebase(service.baseUrl + "teams/" + team_id ); 
