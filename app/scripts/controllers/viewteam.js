@@ -8,8 +8,9 @@
  * Controller of the sample1App
  */
 angular.module('sample1App')
-  .controller('ViewTeamCtrl', function ($scope, firebaseService) {
-   
-   $scope.teamNames = firebaseService.getTeamNames(); 
+    .controller('ViewTeamCtrl', function($scope, firebaseService) {
 
-  });
+        $scope.teams = firebaseService.getTeams();
+
+
+    });

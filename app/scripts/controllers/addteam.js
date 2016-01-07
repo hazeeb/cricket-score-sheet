@@ -10,18 +10,17 @@
 angular.module('sample1App')
   .controller('AddTeamCtrl', function ($scope, $firebaseArray) {
 
-  var ref = new Firebase("https://burning-inferno-1731.firebaseio.com/messages");
+  var ref = new Firebase("https://burning-inferno-1731.firebaseio.com/teams");
 
-  // create a synchronized array
-  $scope.messages = $firebaseArray(ref);
-  // add new items to the array
-  // the message is automatically added to our Firebase database!
-  $scope.addMessage = function() {
-    $scope.messages.$add({
-      text: $scope.newMessageText
+
+  $scope.teams = $firebaseArray(ref);
+
+  $scope.addTeams = function() {
+    $scope.teams.$add({
+      name: $scope.teamName
     });
-  };
 
+  };
 
 
   });
