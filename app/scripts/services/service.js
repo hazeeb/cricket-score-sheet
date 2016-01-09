@@ -13,15 +13,19 @@ angular.module('sample1App')
 			return $firebaseArray(ref);
 		};
 
-		// service.deletePlayer = function(player) {
-		// 	var ref = new Firebase(service.baseUrl + "teams/" + team_id + /"players" );
-		// 	$firebaseObject.$remove(player);
-		// 	return $firebaseArray(ref);
-		// };
+		service.deletePlayer = function(player,team_id, player_id) {
+			var ref = new Firebase(service.baseUrl + "teams/" + team_id + "/players/" + player_id);
+			$firebaseObject.$remove(player);
+			return $firebaseArray(ref);
+		};
 		
+		service.getPlayerDetails = function(team_id,player_id){
+			var ref = new Firebase(service.baseUrl + "teams/" + team_id + "/players/" + player_id);
+			return $firebaseObject(ref);
+		};
 
-		service.getTeamDetails = function(team_id){
-			var ref = new Firebase(service.baseUrl + "teams/" + team_id ); 
+		service.getTeamDetails = function(teamid){
+			var ref = new Firebase(service.baseUrl + "teams/" + teamid ); 
 			return $firebaseObject(ref);
 		};
 

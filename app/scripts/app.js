@@ -36,6 +36,10 @@ angular
         templateUrl: 'views/addplayer.html',
         controller: 'AddplayerCtrl'
       })
+      .when('/playerprofile/:team_id/:player_id', {
+        templateUrl: 'views/playerprofile.html',
+        controller: 'PlayerprofileCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

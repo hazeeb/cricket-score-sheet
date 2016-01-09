@@ -8,21 +8,21 @@
  * Controller of the sample1App
  */
 angular.module('sample1App')
-  .controller('AddplayerCtrl', function ($scope, $routeParams, firebaseService) {
+    .controller('AddplayerCtrl', function($scope, $routeParams, firebaseService) {
 
-  	var team_id = $routeParams.team_id ;
+        var team_id = $routeParams.team_id;
 
-    //get team name 
-    $scope.teamName =  firebaseService.getTeamDetails(team_id);
+        //get team name 
+        $scope.teamName = firebaseService.getTeamDetails(team_id);
 
-    $scope.viewExistingPlayers = firebaseService.getTeamDetails(team_id);
+        $scope.viewExistingPlayers = firebaseService.getTeamDetails(team_id);
 
-  	$scope.addPlayer = function(){
+        $scope.addPlayer = function() {
 
-  		firebaseService.addPlayer(team_id, {
-  			name : $scope.playername,
-  			age : $scope.playerage,
-  			type: $scope.playertype 
-  		});
-  	};
-  });
+            firebaseService.addPlayer(team_id, {
+                name: $scope.playername,
+                age: $scope.playerage,
+                type: $scope.playertype
+            });
+        };
+    });

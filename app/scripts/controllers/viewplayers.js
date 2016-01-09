@@ -8,11 +8,11 @@
  * Controller of the sample1App
  */
 angular.module('sample1App')
-  .controller('ViewPlayersCtrl', function ($scope, $routeParams, firebaseService ) {
+  .controller('ViewPlayersCtrl', function ($scope, $routeParams, firebaseService) {
 
-  	var team_id = $routeParams.team_id ;
+  	var teamid = $routeParams.team_id ;
 
-  	$scope.teamdetails = firebaseService.getTeamDetails(team_id);
-
+  	$scope.teamdetails = firebaseService.getTeamDetails(teamid);
+  		console.log($scope.teamdetails);
 
   });
