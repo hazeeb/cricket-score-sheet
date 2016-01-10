@@ -1,4 +1,13 @@
-<p>This is the players Fucking profile view.</p>
 
-{{playerdetails}}
-<!-- <P ng-repeat="playerdetails in playerdetails"> Name : {{ playerdetails}} </p> -->
+<h3> {{playerdetails.name}} </h3>
+<hr>
+<table class="table table-striped ">
+	<tbody>
+		<tr>
+			<td> Age  </td>
+			<td> {{playerdetails.age}} </td>
+		</tr>
+			<td> Player Role </td>
+			<td> {{playerdetails.type}} </td>
+	</tbody>
+</table>
