@@ -12,6 +12,7 @@ angular.module('sample1App')
 	
   	var playerid = $routeParams.player_id ;
   	var teamid = $routeParams.team_id;
+  	$scope.teamid = $routeParams.team_id;
 
   	$scope.playerdetails = firebaseService.getPlayerDetails(teamid, playerid);
 

@@ -13,6 +13,5 @@ angular.module('sample1App')
   	var teamid = $routeParams.team_id ;
 
   	$scope.teamdetails = firebaseService.getTeamDetails(teamid);
-  		console.log($scope.teamdetails);
 
   });

@@ -1,13 +1,19 @@
 
-<h3> {{playerdetails.name}} </h3>
+<h2> {{playerdetails.name}} </h2>
+<a class="btn  btn-default" ng-href="#/viewplayers/{{teamid}}"><span class="glyphicon glyphicon-user"></span> View Other Players  </a>
+<a class="btn  btn-default" ng-href="#/viewteam"><span class="glyphicon glyphicon-user"></span> View All Team  </a>
 <hr>
-<table class="table table-striped ">
+<table class="table">
 	<tbody>
 		<tr>
 			<td> Age  </td>
-			<td> {{playerdetails.age}} </td>
-		</tr>
+			<td> Team </td>
 			<td> Player Role </td>
+		</tr>
+		<tr>
+			<td>{{playerdetails.age}} </td>
+			<td> asd  </td> 
 			<td> {{playerdetails.type}} </td>
+		</tr>
 	</tbody>
 </table>

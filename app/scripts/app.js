@@ -12,7 +12,8 @@ angular
   .module('sample1App', [
     'ngResource',
     'ngRoute',
-    'firebase'
+    'firebase',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -39,6 +40,10 @@ angular
       .when('/playerprofile/:team_id/:player_id', {
         templateUrl: 'views/playerprofile.html',
         controller: 'PlayerprofileCtrl'
+      })
+      .when('/newmatch', {
+        templateUrl: 'views/newmatch.html',
+        controller: 'NewmatchCtrl'
       })
       .otherwise({
         redirectTo: '/'
