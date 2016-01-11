@@ -12,20 +12,20 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label"> Venue </label>
                 <div class="col-sm-8">
-                    <input type="text" ng-model="" class="form-control">
+                    <input type="text" ng-model="venue" class="form-control">
                 </div>
             </div>
-            <div class="form-group">
+<!--             <div class="form-group">
                 <label class="col-sm-2 control-label"> Date </label>
                 <div class="col-sm-8">
                     <input type="text" ng-model="book.date_added" class="form-control" placeholder="" uib-datepicker-popup="MM-dd-yyyy" datepicker-append-to-body="true" is-open="data.isOpen" ng-click="data.isOpen = true">
                 </div>
-            </div>
+            </div> -->
             <div class="form-group dropdown">
                 <label class="col-sm-2 control-label"> Team 1 </label>
                 <div class="col-sm-8">
-                    <select ng-model="team1" class="form-control">Select a team
-                        <option ng-repeat="teams in teamnames" value="batsman"> {{ teams.name }} </option>
+                    <select ng-model="teamformatch1" class="form-control">Select a team
+                        <option ng-repeat="teams in teamnames"> {{ teams.name }} </option>
                     </select>
                 </div>
             </div>
@@ -33,14 +33,14 @@
             <div class="form-group dropdown">
                 <label class="col-sm-2 control-label"> Team 2 </label>
                 <div class="col-sm-8">
-                    <select ng-model="team2" class="form-control">
-                        <option ng-repeat="team in teamnames" value="batsman"> {{ team.name }} </option>
+                    <select ng-model="teamformatch2" class="form-control">
+                        <option ng-repeat="team in teamnames" > {{ team.name }} </option>
                     </select>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
-                    <button ng-click="" type="submit" class="btn btn-block text-ce btn-success">
+                    <button ng-click="addmatch(unique,venue,teamformatch1,teamformatch2);" type="submit" class="btn btn-block text-ce btn-success">
                         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Submit</button>
                 </div>
             </div>
