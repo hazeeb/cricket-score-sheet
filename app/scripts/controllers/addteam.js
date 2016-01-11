@@ -17,7 +17,8 @@ angular.module('sample1App')
 
   $scope.addTeams = function() {
     $scope.teams.$add({
-      name: $scope.teamName
+      name: $scope.teamName,
+      group : $scope.groupnumber
     });
 
   };

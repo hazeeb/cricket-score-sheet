@@ -15,12 +15,12 @@ angular.module('sample1App')
 
   	//testing 
 
-  	$scope.addmatch = function(unique,venue,teamformatch1,teamformatch2){
+  	$scope.addmatch = function(unique){
   		var ref = new Firebase('https://burning-inferno-1731.firebaseio.com/matches');
   		ref.child(unique).set({
-  			mtachvenue : venue,
-  			matchteam1 : teamformatch1,
-  			matchteam2 : teamformatch2
+  			mtachvenue : $scope.venue,
+  			matchteam1 : $scope.teamformatch1,
+  			matchteam2 : $scope.teamformatch2
   			}
   		);
   	};
